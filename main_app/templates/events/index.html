@@ -1,15 +1,19 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
+{% block content %}
 
 <h1>Events</h1>
 
 {% for event in events %}
-<div class="card">
-  <div class="card-content">
-    <span class="card-title">{{ event.name }}</span>
-    <p>Location: {{ event.location }}</p>
-    <p>Category: {{ event.category }}</p>
-    <p>Time: {{ event.time }}</p>
-    <p>Comments: {{ event.comment }}</p>
+<a href="{% url 'detail' event.id %}">
+  <div class="card">
+    <div class="card-content">
+      <span class="card-title">{{ event.name }}</span>
+      <p>Location: {{ event.location|linebreaks }}</p>
+      <p>Category: {{ event.category }}</p>
+      <p>Time: {{ event.time }}</p>
+      <p>Comments: {{ event.comment|linebreaks }}</p>
+    </div>
   </div>
-</div>
-{% endfor %} {% endblock %}
+</a>
+{% endfor %} 
+{% endblock %}

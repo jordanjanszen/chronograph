@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.urls import reverse
 
 # Create your models here.
 class Event(models.Model):
@@ -10,4 +11,7 @@ class Event(models.Model):
     comment = models.TextField(max_length=250)
 
     def __str__(self):
-        return self.name
+        return f'{self.name} ({self.id})'
+    
+    def get_absolute_url(self):
+        return reverse('events_detail', kwargs={'event_id': self.id})
