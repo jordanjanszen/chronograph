@@ -1,4 +1,4 @@
-# Cronograph 2.0
+# Cronograph
 
 Cronograph is a time-tracking web application built with Django. It allows you to track time spent on various activities throughout your day, ranging from sleep, workouts, meals, and more. With Cronograph, journaling becomes a new experience — helping you visualize and analyze how you spend your time through detailed statistics and logs. Whether you're aiming for productivity or just curious about your habits, Cronograph gives you a comprehensive overview of your life in a sleek, intuitive interface.
 
